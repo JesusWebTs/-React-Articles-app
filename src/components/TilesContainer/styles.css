@@ -1,0 +1,6 @@
+.tiles-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

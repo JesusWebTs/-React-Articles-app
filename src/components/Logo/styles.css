@@ -1,0 +1,14 @@
+.logo-container {
+  margin: 0;
+  padding: 0;
+  width: 150.53px;
+  height: 90px;
+  text-align: center;
+}
+.logo-container > * {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 80px;
+  color: var(--color-black);
+}

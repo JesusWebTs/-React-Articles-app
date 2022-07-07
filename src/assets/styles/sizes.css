@@ -1,0 +1,25 @@
+/* mobile first */
+:root {
+  --text-size: 1;
+  --title-size: 1;
+  --subtitle-size: 1;
+  --button-size: 1;
+  --general-size: 1;
+}
+/* tabletas */
+@media (min-width: 768px) {
+  :root {
+  }
+}
+
+/* escritorio normales */
+@media (min-width: 992px) {
+  :root {
+  }
+}
+
+/* pantallas grandes */
+@media (min-width: 1200px) {
+  :root {
+  }
+}
