@@ -9,8 +9,9 @@ function App() {
   const { articles, setFilter, filter } = useArticles();
   return (
     <div className="App">
-      <HeroImage text="El secreto de tu cocina" />
-      <header></header>
+      <header>
+        <HeroImage text="El secreto de tu cocina" />
+      </header>
       <main>
         <section className="section-container">
           <header>

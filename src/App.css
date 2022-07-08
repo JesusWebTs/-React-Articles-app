@@ -1,6 +1,5 @@
 .App {
   padding-bottom: 50px;
-  width: 100vw;
 }
 .section-container {
   display: flex;
@@ -19,10 +18,9 @@
   position: sticky;
   top: 100px;
   height: min-content;
-  width: 20%;
+  width: 20vw;
 }
 .tiles-searcher__right {
-  width: 70vw;
-  top: 80%;
+  width: 60vw;
   height: min-content;
 }
