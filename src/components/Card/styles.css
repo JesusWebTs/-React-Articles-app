@@ -11,6 +11,10 @@
   justify-self: center;
   position: relative;
   transition: all 0.2s linear;
+  animation-name: card-show;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .card-container:hover .card-container__header * {
@@ -29,7 +33,7 @@
 .card-container__header * {
   margin: 0;
   padding: 0;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .card-container:hover {
@@ -43,4 +47,30 @@
   font-weight: bold;
   width: 100%;
   text-align: center;
+}
+
+.car-container__img-container {
+  position: relative;
+  max-width: 100%;
+  height: 204px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container__loader {
+  position: absolute;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes card-show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

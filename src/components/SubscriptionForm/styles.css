@@ -10,7 +10,7 @@
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
-  margin: 50px;
+  margin: 15px 0;
 }
 
 .form-container label {
@@ -53,8 +53,8 @@
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  margin-right: 50px;
   transition: all 0.2s linear;
+  margin-top: 15px;
 }
 
 .form-container__submit:hover {

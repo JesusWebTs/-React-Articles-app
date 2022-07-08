@@ -6,7 +6,8 @@
   border-top: none;
   animation-name: loader-sapin;
   animation-duration: 1s;
-  animation-iteration-count: linear infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes loader-sapin {
