@@ -7,7 +7,6 @@ function useArticles() {
 
   useEffect(() => {    
     getArticles();
-    console.log(filter);
     return () => {};
   }, [filter]);
 

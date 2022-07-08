@@ -1,17 +1,13 @@
 import React from "react";
 import { Link, Route } from "wouter";
 import "./styles.css";
-function NavBar({
-  routes = [{ name: "", route: "", filter: "" }],
-  setFilter,
-  filter,
-}) {
+function NavBar({ routes = [{ name: "", filter: "" }], setFilter, filter }) {
   return (
     <nav className="navbar-container">
       <Route>
         <ul>
           {routes.map((route) => (
-            <li>
+            <li key={route.name}>
               <a
                 className={`navbar-container__item ${
                   route.filter === filter
