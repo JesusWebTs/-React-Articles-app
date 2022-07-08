@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import useSubscription from "../../hooks/useSubscription";
 
 let nameExp =
   /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
@@ -6,7 +7,8 @@ let nameExp =
 let emailExp =
   /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
-let phoneExp = /^[09][0-9]{1,7}$/;
+let phoneExp =
+  /[\(]?[\+]?(\d{2}|\d{3})[\)]?[\s]?((\d{6}|\d{8})|(\d{3}[\*\.\-\s]){3}|(\d{2}[\*\.\-\s]){4}|(\d{4}[\*\.\-\s]){2})|\d{8}|\d{10}|\d{12}/;
 
 function useSubscriptionForm() {
   let [name, setName] = useState("");
@@ -18,6 +20,7 @@ function useSubscriptionForm() {
   let [errorEmail, setErrorEmail] = useState(false);
   let [errorPhone, setErrorPhone] = useState(false);
   let [submited, setSubmited] = useState(false);
+  const { subscribe } = useSubscription();
 
   useEffect(() => {
     if (submited) {
@@ -65,6 +68,9 @@ function useSubscriptionForm() {
       error = true;
     }
     if (error) return;
+    else {
+      subscribe({ email, lastname: lastName, phone, firstname: name });
+    }
   };
 
   return {

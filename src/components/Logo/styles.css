@@ -4,6 +4,11 @@
   width: 150.53px;
   height: 90px;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.logo-container:hover {
+  transform: rotateZ(-3.5deg) scale(1.1);
 }
 .logo-container > * {
   padding: 0;

@@ -30,6 +30,7 @@
   width: 350.84px;
   height: 50px;
   outline: none;
+  transition: all 0.2s linear;
 }
 
 .form-container__input:hover {
@@ -53,6 +54,7 @@
   font-size: 15px;
   cursor: pointer;
   margin-right: 50px;
+  transition: all 0.2s linear;
 }
 
 .form-container__submit:hover {

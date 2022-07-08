@@ -3,7 +3,6 @@ import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPeopleRoof } from "@fortawesome/free-solid-svg-icons";
 function SocialIcon({ icon = faPeopleRoof }) {
-  console.log(icon);
   return (
     <div className="icon-container">
       <i>

@@ -16,15 +16,18 @@
   flex-direction: column;
   gap: 24px;
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .navbar-container__item:hover,
 .navbar-container__item--active {
+  transition: all 0.2s linear;
   color: var(--color-2);
 }
 
 .navbar-container__item:hover::before,
 .navbar-container__item--active::before {
+  transition: all 0.2s linear;
   content: "➜";
   position: absolute;
   color: var(--color-2);
@@ -33,4 +36,13 @@
   width: 10px;
   height: 10px;
   transform: translateY(-7px);
+}
+
+@keyframes before-1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

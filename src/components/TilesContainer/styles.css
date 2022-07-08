@@ -4,3 +4,9 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.tiles-container__loader {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}

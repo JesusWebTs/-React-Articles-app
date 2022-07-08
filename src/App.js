@@ -2,8 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import { NavBar, Title, TilesContainer, SubscriptionForm } from "./components";
 import HeroImage from "./components/HeroImage";
-import mooksArticles from "./assets/mooks/articles";
+
+import useArticles from "./hooks/useArticles";
+import { Route } from "wouter";
 function App() {
+  const { articles, setFilter, filter } = useArticles();
   return (
     <div className="App">
       <HeroImage text="El secreto de tu cocina" />
@@ -19,25 +22,28 @@ function App() {
                 routes={[
                   {
                     name: "TODOS",
-                    route: "/todos",
+                    filter: "Todos",
                   },
                   {
                     name: "PRODUCTOS",
-                    route: "/productos",
+                    filter: "Productos",
                   },
                   {
                     name: "RECETAS",
-                    route: "/recetas",
+                    filter: "Recetas",
                   },
                   {
                     name: "CONSEJOS",
-                    route: "/consejos",
+                    filter: "Consejos",
                   },
                 ]}
+                filter={filter}
+                setFilter={setFilter}
               />
             </div>
-            <div className="tiles-searcher__right"></div>
-            <TilesContainer tiles={mooksArticles} />
+            <div className="tiles-searcher__right">
+              <TilesContainer tiles={articles} />
+            </div>
           </div>
         </section>
         <section className="section-container">

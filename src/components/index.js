@@ -5,6 +5,7 @@ import Title from "./Title";
 import TilesContainer from "./TilesContainer";
 import Card from "./Card";
 import SubscriptionForm from "./SubscriptionForm";
+import Loader from "./Loader";
 
 export {
   NavBar,
@@ -14,4 +15,5 @@ export {
   TilesContainer,
   Card,
   SubscriptionForm,
+  Loader,
 };
